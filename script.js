@@ -66,11 +66,12 @@ const translations = {
         interestsTitle:
             "Current Interests",
 
+        videoEditing:
+            "VIDEO EDITING",
+
         footer:
             "thanks for stopping by."
-           
-         videoEditing:
-             "VIDEO EDITING",
+
     },
 
 
@@ -92,10 +93,12 @@ const translations = {
         interestsTitle:
             "Interesses Atuais",
 
+        videoEditing:
+            "EDITAR VÍDEOS",
+
         footer:
             "obrigado por passares por aqui."
-        videoEditing:
-                "EDITAR VÍDEOS",
+
     }
 
 };
@@ -142,9 +145,9 @@ function setLanguage(lang) {
         translations[safeLang];
 
 
-    /*
-        Random line below the avatar.
-    */
+    /* -------------------------
+       Random hero text
+    -------------------------- */
 
     heroRotatingText.textContent =
         pickRandom(
@@ -152,25 +155,25 @@ function setLanguage(lang) {
         );
 
 
-    /*
-        About Me text.
-    */
+    /* -------------------------
+       About Me
+    -------------------------- */
 
     aboutCopy.textContent =
         copy.aboutCopy;
 
 
-    /*
-        Footer.
-    */
+    /* -------------------------
+       Footer
+    -------------------------- */
 
     footerMessage.textContent =
         copy.footer;
 
 
-    /*
-        Section titles.
-    */
+    /* -------------------------
+       About title
+    -------------------------- */
 
     const aboutTitle =
         document.querySelector(
@@ -185,6 +188,10 @@ function setLanguage(lang) {
     }
 
 
+    /* -------------------------
+       Interests title
+    -------------------------- */
+
     const interestsTitle =
         document.querySelector(
             "[data-i18n='interestsTitle']"
@@ -197,6 +204,27 @@ function setLanguage(lang) {
 
     }
 
+
+    /* -------------------------
+       Video Editing button
+    -------------------------- */
+
+    const videoEditing =
+        document.querySelector(
+            "[data-i18n='videoEditing']"
+        );
+
+    if (videoEditing) {
+
+        videoEditing.textContent =
+            copy.videoEditing;
+
+    }
+
+
+    /* -------------------------
+       HTML language
+    -------------------------- */
 
     document.documentElement.lang =
         safeLang === "pt"
@@ -361,8 +389,8 @@ playButton.addEventListener(
             } catch {
 
                 /*
-                    Browser blocked autoplay/playback.
-                    User can still press Play again.
+                    Browser blocked playback.
+                    User can press Play again.
                 */
 
             }
@@ -621,9 +649,10 @@ window.addEventListener(
    YOUR CUSTOM LINKS
 ========================================================= */
 
-/*
-    CIGA
-*/
+
+/* -------------------------
+   CIGA
+-------------------------- */
 
 const cigaLink =
     document.getElementById("cigaLink");
@@ -645,9 +674,9 @@ if (cigaLink) {
 }
 
 
-/*
-    Streaming
-*/
+/* -------------------------
+   Streaming
+-------------------------- */
 
 const streamingLink =
     document.getElementById("streamingLink");
@@ -669,9 +698,9 @@ if (streamingLink) {
 }
 
 
-/*
-    Video editing
-*/
+/* -------------------------
+   Video editing
+-------------------------- */
 
 const editingLink =
     document.getElementById("editingLink");
