@@ -7,12 +7,17 @@
     --bg:
         #080606;
 
+    /*
+        Slightly lighter than the previous version.
+        Still clearly opaque enough to keep the content
+        as the main focus.
+    */
     --panel-bg:
         rgba(
             9,
             8,
             9,
-            0.80
+            0.76
         );
 
     --panel-solid:
@@ -56,12 +61,14 @@
 ========================================================= */
 
 * {
-    box-sizing: border-box;
+    box-sizing:
+        border-box;
 }
 
 
 html {
-    min-height: 100%;
+    min-height:
+        100%;
 
     scroll-behavior:
         smooth;
@@ -69,6 +76,9 @@ html {
 
 
 body {
+    position:
+        relative;
+
     margin:
         0;
 
@@ -96,6 +106,7 @@ body {
 ========================================================= */
 
 .background-layer {
+
     position:
         fixed;
 
@@ -119,6 +130,7 @@ body {
 
 
 .background-layer img {
+
     position:
         absolute;
 
@@ -151,12 +163,14 @@ body {
 
 
 .background-layer.is-visible img {
+
     opacity:
         1;
 }
 
 
 .background-layer::after {
+
     content:
         "";
 
@@ -191,18 +205,14 @@ body {
 
 
 /* =========================================================
-   SCROLLING DECORATION
+   DECORATIVE LAYER
+
+   No min-height.
+   No fixed height.
+   It follows the actual page/body height.
 ========================================================= */
 
 .site-decor {
-
-    /*
-        IMPORTANT:
-        NOT fixed.
-
-        It exists in the document,
-        so the decoration scrolls.
-    */
 
     position:
         absolute;
@@ -216,11 +226,17 @@ body {
     width:
         100%;
 
-    min-height:
-        2600px;
+    /*
+        Important:
 
+        The decoration itself must NOT be what
+        creates the page's scroll height.
+    */
     height:
         100%;
+
+    min-height:
+        0;
 
     z-index:
         1;
@@ -234,7 +250,7 @@ body {
 
 
 /* =========================================================
-   TENOR GIF CONTAINERS
+   TENOR GIFS
 ========================================================= */
 
 .decor-item {
@@ -245,26 +261,17 @@ body {
     display:
         block;
 
-    pointer-events:
-        auto;
-
     margin:
         0;
 
     padding:
         0;
 
-    text-decoration:
+    pointer-events:
         none;
 
     overflow:
         hidden;
-
-    background:
-        transparent;
-
-    border:
-        none;
 
     opacity:
         0.62;
@@ -296,25 +303,39 @@ body {
 
 
 /*
-    Tenor creates a wrapper around the embed.
+    Disable Tenor controls / hover UI.
+
+    The GIFs are decoration, not buttons.
 */
 
-.decor-item .tenor-gif-embed {
+.decor-item
+.tenor-gif-embed {
 
     width:
-        100% !important;
+        100%
+        !important;
 
     margin:
-        0 !important;
+        0
+        !important;
 
+    pointer-events:
+        none
+        !important;
 }
 
 
-.decor-item iframe {
+.decor-item
+.tenor-gif-embed
+iframe {
+
+    pointer-events:
+        none
+        !important;
 
     border:
-        none !important;
-
+        none
+        !important;
 }
 
 
@@ -351,25 +372,17 @@ body {
 .decor-ghost:hover {
 
     opacity:
-        0.97;
-
-    filter:
-        saturate(
-            1
-        )
-        contrast(
-            1
-        );
+        0.82;
 
     transform:
         rotate(
-            -1deg
+            -2deg
         )
         translateY(
-            -6px
+            -4px
         )
         scale(
-            1.035
+            1.02
         );
 }
 
@@ -407,25 +420,17 @@ body {
 .decor-outlast-one:hover {
 
     opacity:
-        0.96;
-
-    filter:
-        saturate(
-            0.92
-        )
-        contrast(
-            1
-        );
+        0.82;
 
     transform:
         rotate(
             1deg
         )
         translateY(
-            -6px
+            -4px
         )
         scale(
-            1.035
+            1.02
         );
 }
 
@@ -459,25 +464,7 @@ body {
         );
 
     opacity:
-        0.45;
-}
-
-
-.decor-outlast-two:hover {
-
-    opacity:
-        0.88;
-
-    transform:
-        rotate(
-            -2deg
-        )
-        translateY(
-            -4px
-        )
-        scale(
-            1.03
-        );
+        0.43;
 }
 
 
@@ -511,24 +498,6 @@ body {
 }
 
 
-.decor-kurumi-one:hover {
-
-    opacity:
-        0.97;
-
-    transform:
-        rotate(
-            1deg
-        )
-        translateY(
-            -6px
-        )
-        scale(
-            1.04
-        );
-}
-
-
 /* =========================================================
    KURUMI #2
 ========================================================= */
@@ -558,30 +527,12 @@ body {
         );
 
     opacity:
-        0.53;
-}
-
-
-.decor-kurumi-two:hover {
-
-    opacity:
-        0.94;
-
-    transform:
-        rotate(
-            0deg
-        )
-        translateY(
-            -5px
-        )
-        scale(
-            1.035
-        );
+        0.52;
 }
 
 
 /* =========================================================
-   DECORATIVE STICKERS
+   SMALL STICKERS
 ========================================================= */
 
 .decor-sticker {
@@ -627,9 +578,12 @@ body {
         nowrap;
 
     opacity:
-        0.60;
+        0.58;
 
     user-select:
+        none;
+
+    pointer-events:
         none;
 
     box-shadow:
@@ -642,15 +596,8 @@ body {
             0,
             0.24
         );
-
-    pointer-events:
-        none;
 }
 
-
-/* -------------------------
-   ONLINE
--------------------------- */
 
 .sticker-online {
 
@@ -667,10 +614,6 @@ body {
 }
 
 
-/* -------------------------
-   LEVEL 94
--------------------------- */
-
 .sticker-94 {
 
     right:
@@ -686,10 +629,6 @@ body {
 }
 
 
-/* -------------------------
-   LIVE
--------------------------- */
-
 .sticker-live {
 
     right:
@@ -704,10 +643,6 @@ body {
         );
 }
 
-
-/* -------------------------
-   RED //
--------------------------- */
 
 .sticker-red {
 
@@ -741,10 +676,6 @@ body {
         );
 }
 
-
-/* -------------------------
-   EYE
--------------------------- */
 
 .sticker-eye {
 
@@ -798,10 +729,6 @@ body {
 }
 
 
-/* -------------------------
-   ///
--------------------------- */
-
 .mark-one {
 
     left:
@@ -826,10 +753,6 @@ body {
 }
 
 
-/* -------------------------
-   01
--------------------------- */
-
 .mark-two {
 
     right:
@@ -846,10 +769,6 @@ body {
 }
 
 
-/* -------------------------
-   +
--------------------------- */
-
 .mark-three {
 
     left:
@@ -865,10 +784,6 @@ body {
         0.29;
 }
 
-
-/* -------------------------
-   94
--------------------------- */
 
 .mark-four {
 
@@ -2086,7 +2001,7 @@ body {
     .decor-item {
 
         opacity:
-            0.46;
+            0.42;
     }
 
 
@@ -2274,15 +2189,10 @@ body {
     }
 
 
-    /*
-        Keep the decoration present,
-        but farther outside the content.
-    */
-
     .decor-item {
 
         opacity:
-            0.24;
+            0.22;
     }
 
 
@@ -2293,9 +2203,6 @@ body {
 
         left:
             -35px;
-
-        top:
-            240px;
     }
 
 
@@ -2306,9 +2213,6 @@ body {
 
         right:
             -32px;
-
-        top:
-            820px;
     }
 
 
@@ -2319,9 +2223,6 @@ body {
 
         left:
             -25px;
-
-        top:
-            1280px;
     }
 
 
@@ -2332,9 +2233,6 @@ body {
 
         right:
             -28px;
-
-        top:
-            430px;
     }
 
 
@@ -2345,26 +2243,13 @@ body {
 
         left:
             -25px;
-
-        top:
-            1500px;
     }
 
 
     .decor-sticker {
 
-        opacity:
-            0.25;
-
-        font-size:
-            8px;
-    }
-
-
-    .decor-mark {
-
-        opacity:
-            0.22;
+        display:
+            none;
     }
 
 }
@@ -2421,7 +2306,7 @@ body {
     .decor-item {
 
         opacity:
-            0.16;
+            0.15;
     }
 
 
@@ -2463,13 +2348,6 @@ body {
 
         width:
             68px;
-    }
-
-
-    .decor-sticker {
-
-        display:
-            none;
     }
 
 }
