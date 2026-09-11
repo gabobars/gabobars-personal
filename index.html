@@ -4,114 +4,461 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>gabobars</title>
+    <meta name="theme-color" content="#080607">
+
+    <title>GABOBARS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IM+Fell+English+SC&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main>
-
-        <!-- HERO -->
-        <section class="hero">
-            <h1>GABOBARS</h1>
-
-            <p class="tagline">
-                just some guy on the internet
-            </p>
-
-            <div class="hero-divider"></div>
-        </section>
+    <!-- BACKGROUND -->
+    <div class="background-layer" aria-hidden="true">
+        <img
+            id="backgroundImage"
+            src="assets/background.jpg"
+            alt=""
+        >
+    </div>
 
 
-        <!-- LINKS -->
-        <section class="links">
-            <a href="#" target="_blank">TWITCH</a>
-            <a href="#" target="_blank">YOUTUBE</a>
-            <a href="#" target="_blank">DISCORD</a>
-            <a href="#" target="_blank">GITHUB</a>
-            <a href="#" target="_blank">ITCH.IO</a>
-            <a href="#" target="_blank">STEAM</a>
-        </section>
+    <!-- MAIN SITE -->
+    <main class="site-shell">
+
+        <section class="site-panel">
+
+            <!-- Subtle scroll shadows -->
+            <div class="panel-shadow panel-shadow-top"></div>
+            <div class="panel-shadow panel-shadow-bottom"></div>
 
 
-        <!-- CURRENTLY -->
-        <section class="section">
-            <div class="section-title">
-                CURRENTLY
-            </div>
+            <!-- =========================
+                 HERO
+            ========================== -->
+            <header class="hero">
 
-            <div class="currently">
-                <p>🎧 Ghost</p>
-                <p>🎮 Resident Evil</p>
-                <p>💻 CIGA Interaction Studio</p>
-            </div>
-        </section>
+                <!-- GABOBARS -->
+                <div class="brand">
 
+                    <h1>GABOBARS</h1>
 
-        <!-- ABOUT -->
-        <section class="section">
-            <div class="section-title">
-                ABOUT
-            </div>
+                    <span class="brand-line"></span>
 
-            <p class="about-text">
-                VTuber / gamer / developer
-            </p>
-
-            <p class="about-text">
-                Portugal
-            </p>
-
-            <p class="about-text">
-                making weird things on the internet
-            </p>
-        </section>
-
-
-        <!-- THINGS I LIKE -->
-        <section class="section">
-            <div class="section-title">
-                THINGS I LIKE
-            </div>
-
-            <p class="likes">
-                GHOST · SLIPKNOT · METALLICA
-            </p>
-
-            <p class="likes">
-                OUTLAST · FNAF · RESIDENT EVIL
-            </p>
-
-            <p class="likes">
-                MONOGATARI · BLENDER · GODOT
-            </p>
-        </section>
-
-
-        <!-- MUSIC -->
-        <section class="section music">
-            <div class="section-title">
-                NOW PLAYING
-            </div>
-
-            <div class="music-player">
-
-                <div class="music-info">
-                    <p class="music-artist">GHOST</p>
-                    <p class="music-title">your song</p>
                 </div>
 
-                <audio controls>
-                    <source src="assets/music/music.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+
+                <!-- LANGUAGE SWITCH -->
+                <div class="language-toggle-wrap">
+
+                    <button
+                        class="language-toggle"
+                        id="languageToggle"
+                        type="button"
+                        aria-label="Switch language"
+                    >
+
+                        <span class="toggle-option" data-lang="pt">
+                            PT
+                        </span>
+
+                        <span class="toggle-option" data-lang="en">
+                            ENG
+                        </span>
+
+                        <span
+                            class="toggle-indicator"
+                            id="toggleIndicator"
+                        ></span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- AVATAR -->
+                <div class="hero-center">
+
+                    <img
+                        class="avatar"
+                        src="assets/avatar.png"
+                        alt="GABOBARS avatar"
+                    >
+
+                    <p
+                        class="hero-rotating"
+                        id="heroRotatingText"
+                    ></p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =========================
+                 CONTENT
+            ========================== -->
+            <div class="content">
+
+
+                <!-- ABOUT ME -->
+                <section class="content-section about-section">
+
+                    <h2
+                        class="section-title"
+                        data-i18n="aboutTitle"
+                    >
+                        About Me
+                    </h2>
+
+                    <span
+                        class="section-line"
+                        aria-hidden="true"
+                    ></span>
+
+                    <p
+                        class="about-copy"
+                        id="aboutCopy"
+                    ></p>
+
+                </section>
+
+
+
+                <!-- SOCIAL LINKS -->
+                <section class="content-section social-section">
+
+                    <nav
+                        class="social-links"
+                        aria-label="Social links"
+                    >
+
+                        <a
+                            href="https://twitch.tv/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            TWITCH
+                        </a>
+
+                        <span class="social-divider"></span>
+
+                        <a
+                            href="https://youtube.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            YOUTUBE
+                        </a>
+
+                        <span class="social-divider"></span>
+
+                        <a
+                            href="https://discord.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            DISCORD
+                        </a>
+
+                        <span class="social-divider"></span>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GITHUB
+                        </a>
+
+                        <span class="social-divider"></span>
+
+                        <a
+                            href="https://steamcommunity.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            STEAM
+                        </a>
+
+                        <span class="social-divider"></span>
+
+                        <a
+                            href="https://itch.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ITCH.IO
+                        </a>
+
+                    </nav>
+
+                </section>
+
+
+
+                <!-- CURRENT INTERESTS -->
+                <section class="content-section interests-section">
+
+                    <h2
+                        class="section-title"
+                        data-i18n="interestsTitle"
+                    >
+                        Current Interests
+                    </h2>
+
+                    <span
+                        class="section-line"
+                        aria-hidden="true"
+                    ></span>
+
+
+                    <div class="interest-grid">
+
+                        <!-- Games / media -->
+
+                        <a
+                            class="interest-button"
+                            href="https://ghost-official.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GHOST
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://www.outlastgame.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            OUTLAST
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://www.residentevil.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            RESIDENT EVIL
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://joeydrewstudios.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            BENDY
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://unknownworlds.com/subnautica/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SUBNAUTICA
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://date-a-live-anime.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            DATE A LIVE
+                        </a>
+
+
+                        <!-- Visual group separation -->
+
+                        <span class="interest-group-gap"></span>
+
+
+                        <!-- Creation / other -->
+
+                        <a
+                            class="interest-button"
+                            href="https://freddy-fazbears-pizza.fandom.com/wiki/Five_Nights_at_Freddy%27s"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            FNAF
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://www.blender.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            BLENDER
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="#"
+                            id="cigaLink"
+                        >
+                            CIGA
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="#"
+                            id="streamingLink"
+                        >
+                            STREAMING
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="#"
+                            id="editingLink"
+                        >
+                            EDITAR VÍDEOS
+                        </a>
+
+                        <a
+                            class="interest-button"
+                            href="https://slipknot1.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SLIPKNOT
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- FOOTER -->
+                <footer class="site-footer">
+
+                    <div class="footer-line"></div>
+
+                    <div class="footer-row">
+
+                        <p id="footerMessage"></p>
+
+                        <p>
+                            GABOBARS — 2026
+                        </p>
+
+                    </div>
+
+                </footer>
 
             </div>
+
         </section>
 
     </main>
+
+
+
+    <!-- =========================
+         MUSIC PLAYER
+    ========================== -->
+    <aside
+        class="music-player"
+        id="musicPlayer"
+    >
+
+        <div class="player-main">
+
+            <div class="player-label">
+                original track
+            </div>
+
+
+            <div class="player-controls-row">
+
+                <button
+                    class="play-button"
+                    id="playButton"
+                    type="button"
+                    aria-label="Play"
+                >
+                    ▶
+                </button>
+
+
+                <input
+                    class="progress-range"
+                    id="progressRange"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                    step="0.1"
+                    aria-label="Track progress"
+                >
+
+
+                <span
+                    class="time-current"
+                    id="timeCurrent"
+                >
+                    0:00
+                </span>
+
+
+                <button
+                    class="volume-button"
+                    id="volumeButton"
+                    type="button"
+                    aria-label="Volume"
+                >
+                    🔊
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="volume-popover"
+            id="volumePopover"
+        >
+
+            <input
+                id="volumeRange"
+                type="range"
+                min="0"
+                max="1"
+                value="0.1"
+                step="0.01"
+                aria-label="Volume"
+            >
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- AUDIO -->
+    <audio
+        id="audio"
+        preload="metadata"
+        src="assets/original-track.mp3"
+    ></audio>
+
 
     <script src="script.js"></script>
 
