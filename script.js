@@ -633,7 +633,7 @@ document
              */
 
             window.location.href =
-                "https://example.com/ciga";
+                "https://ciga-website.ciga-hq.workers.dev/";
 
         }
     );
@@ -659,7 +659,7 @@ document
              */
 
             window.location.href =
-                "https://twitch.tv/";
+                "https://twitch.tv/gabobars";
 
         }
     );
@@ -685,7 +685,7 @@ document
              */
 
             window.location.href =
-                "https://example.com/editing";
+                "https://www.youtube.com/@gabobars";
 
         }
     );
