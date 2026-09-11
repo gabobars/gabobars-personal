@@ -1,17 +1,11 @@
 /* =========================================================
-   GABOBARS
+   GABOBARS — PERSONAL SITE
 ========================================================= */
 
 :root {
 
-    --bg:
-        #080606;
+    --bg: #080606;
 
-    /*
-        Slightly lighter than the previous version.
-        Still clearly opaque enough to keep the content
-        as the main focus.
-    */
     --panel-bg:
         rgba(
             9,
@@ -190,26 +184,22 @@ body {
                 80,
                 7,
                 14,
-                0.07
+                0.06
             ),
-            transparent 18%,
-            transparent 82%,
+            transparent 16%,
+            transparent 84%,
             rgba(
                 80,
                 7,
                 14,
-                0.07
+                0.06
             )
         );
 }
 
 
 /* =========================================================
-   DECORATIVE LAYER
-
-   No min-height.
-   No fixed height.
-   It follows the actual page/body height.
+   SCROLLING DECORATION
 ========================================================= */
 
 .site-decor {
@@ -226,12 +216,6 @@ body {
     width:
         100%;
 
-    /*
-        Important:
-
-        The decoration itself must NOT be what
-        creates the page's scroll height.
-    */
     height:
         100%;
 
@@ -250,7 +234,7 @@ body {
 
 
 /* =========================================================
-   TENOR GIFS
+   DECORATIVE GIFS
 ========================================================= */
 
 .decor-item {
@@ -274,39 +258,42 @@ body {
         hidden;
 
     opacity:
-        0.62;
+        0.60;
 
     transform-origin:
         center center;
 
     filter:
         saturate(
-            0.72
+            0.70
         )
         contrast(
-            0.96
+            0.95
         );
 
+    /*
+        Deliberately slightly slower / less "UI-like"
+        than the rest of the site.
+    */
     transition:
         opacity
-        180ms
-        ease,
-
-        transform
         220ms
         ease,
 
+        transform
+        300ms
+        cubic-bezier(
+            0.2,
+            0.7,
+            0.2,
+            1
+        ),
+
         filter
-        180ms
+        220ms
         ease;
 }
 
-
-/*
-    Disable Tenor controls / hover UI.
-
-    The GIFs are decoration, not buttons.
-*/
 
 .decor-item
 .tenor-gif-embed {
@@ -329,11 +316,11 @@ body {
 .tenor-gif-embed
 iframe {
 
-    pointer-events:
+    border:
         none
         !important;
 
-    border:
+    pointer-events:
         none
         !important;
 }
@@ -369,24 +356,6 @@ iframe {
 }
 
 
-.decor-ghost:hover {
-
-    opacity:
-        0.82;
-
-    transform:
-        rotate(
-            -2deg
-        )
-        translateY(
-            -4px
-        )
-        scale(
-            1.02
-        );
-}
-
-
 /* =========================================================
    OUTLAST #1
 ========================================================= */
@@ -407,30 +376,15 @@ iframe {
             35px
         );
 
+    /*
+        Moved slightly upwards.
+    */
     top:
-        890px;
+        790px;
 
     transform:
         rotate(
             3deg
-        );
-}
-
-
-.decor-outlast-one:hover {
-
-    opacity:
-        0.82;
-
-    transform:
-        rotate(
-            1deg
-        )
-        translateY(
-            -4px
-        )
-        scale(
-            1.02
         );
 }
 
@@ -455,8 +409,12 @@ iframe {
             42px
         );
 
+    /*
+        Moved upwards so it remains
+        naturally inside the actual page.
+    */
     top:
-        1420px;
+        1240px;
 
     transform:
         rotate(
@@ -464,7 +422,7 @@ iframe {
         );
 
     opacity:
-        0.43;
+        0.42;
 }
 
 
@@ -489,7 +447,7 @@ iframe {
         );
 
     top:
-        420px;
+        380px;
 
     transform:
         rotate(
@@ -518,8 +476,11 @@ iframe {
             90px
         );
 
+    /*
+        Also moved upward.
+    */
     top:
-        1610px;
+        1430px;
 
     transform:
         rotate(
@@ -527,7 +488,7 @@ iframe {
         );
 
     opacity:
-        0.52;
+        0.50;
 }
 
 
@@ -541,8 +502,8 @@ iframe {
         absolute;
 
     padding:
-        6px
-        9px;
+        5px
+        8px;
 
     color:
         var(--text-soft);
@@ -552,7 +513,7 @@ iframe {
             7,
             6,
             7,
-            0.70
+            0.68
         );
 
     border:
@@ -561,7 +522,7 @@ iframe {
             0,
             0,
             0,
-            0.75
+            0.72
         );
 
     font:
@@ -572,13 +533,13 @@ iframe {
         monospace;
 
     letter-spacing:
-        0.08em;
+        0.06em;
 
     white-space:
         nowrap;
 
     opacity:
-        0.58;
+        0.53;
 
     user-select:
         none;
@@ -586,30 +547,39 @@ iframe {
     pointer-events:
         none;
 
+    /*
+        Slightly imperfect shadow rather than
+        a perfectly centered UI shadow.
+    */
     box-shadow:
+        2px
         3px
-        4px
         0
         rgba(
             0,
             0,
             0,
-            0.24
+            0.20
         );
 }
 
 
+/*
+    These positions are intentionally
+    not perfectly symmetrical.
+*/
+
 .sticker-online {
 
     left:
-        7vw;
+        7.3vw;
 
     top:
-        720px;
+        710px;
 
     transform:
         rotate(
-            -5deg
+            -4deg
         );
 }
 
@@ -617,14 +587,14 @@ iframe {
 .sticker-94 {
 
     right:
-        6vw;
+        5.6vw;
 
     top:
-        1320px;
+        1185px;
 
     transform:
         rotate(
-            4deg
+            3deg
         );
 }
 
@@ -632,14 +602,14 @@ iframe {
 .sticker-live {
 
     right:
-        10vw;
+        9.3vw;
 
     top:
-        1810px;
+        1650px;
 
     transform:
         rotate(
-            -3deg
+            -2deg
         );
 }
 
@@ -647,43 +617,13 @@ iframe {
 .sticker-red {
 
     left:
-        9vw;
+        8.6vw;
 
     top:
-        1180px;
+        1040px;
 
-    color:
-        var(--red);
-
-    border:
-        none;
-
-    background:
-        transparent;
-
-    box-shadow:
-        none;
-
-    font-size:
-        15px;
-
-    opacity:
-        0.45;
-
-    transform:
-        rotate(
-            -7deg
-        );
-}
-
-
-.sticker-eye {
-
-    right:
-        8vw;
-
-    top:
-        650px;
+    padding:
+        0;
 
     border:
         none;
@@ -701,7 +641,43 @@ iframe {
         16px;
 
     opacity:
-        0.36;
+        0.40;
+
+    transform:
+        rotate(
+            -8deg
+        );
+}
+
+
+.sticker-eye {
+
+    right:
+        7.5vw;
+
+    top:
+        585px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    box-shadow:
+        none;
+
+    color:
+        var(--red);
+
+    font-size:
+        15px;
+
+    opacity:
+        0.31;
 }
 
 
@@ -732,19 +708,19 @@ iframe {
 .mark-one {
 
     left:
-        3vw;
+        3.1vw;
 
     top:
-        510px;
+        480px;
 
     font-size:
-        11px;
+        10px;
 
     letter-spacing:
-        0.22em;
+        0.24em;
 
     opacity:
-        0.45;
+        0.40;
 
     transform:
         rotate(
@@ -756,48 +732,48 @@ iframe {
 .mark-two {
 
     right:
-        4vw;
+        4.2vw;
 
     top:
-        1080px;
+        980px;
 
     font-size:
         10px;
 
     opacity:
-        0.31;
+        0.27;
 }
 
 
 .mark-three {
 
     left:
-        5vw;
+        5.4vw;
 
     top:
-        1480px;
+        1320px;
 
     font-size:
-        15px;
+        14px;
 
     opacity:
-        0.29;
+        0.25;
 }
 
 
 .mark-four {
 
     right:
-        3.5vw;
+        3.7vw;
 
     top:
-        1730px;
+        1570px;
 
     font-size:
         10px;
 
     opacity:
-        0.30;
+        0.26;
 }
 
 
@@ -861,7 +837,7 @@ iframe {
             0,
             0,
             0,
-            0.30
+            0.28
         );
 
     opacity:
@@ -903,7 +879,6 @@ iframe {
             translateY(
                 16px
             );
-
     }
 
     to {
@@ -915,9 +890,7 @@ iframe {
             translateY(
                 0
             );
-
     }
-
 }
 
 
@@ -1350,7 +1323,7 @@ iframe {
 
 
 /* =========================================================
-   SOCIALS
+   SOCIAL LINKS
 ========================================================= */
 
 .social-section {
@@ -2001,7 +1974,7 @@ iframe {
     .decor-item {
 
         opacity:
-            0.42;
+            0.40;
     }
 
 
@@ -2022,6 +1995,9 @@ iframe {
 
         right:
             5px;
+
+        top:
+            710px;
     }
 
 
@@ -2032,6 +2008,9 @@ iframe {
 
         left:
             5px;
+
+        top:
+            1120px;
     }
 
 
@@ -2042,6 +2021,9 @@ iframe {
 
         right:
             5px;
+
+        top:
+            350px;
     }
 
 
@@ -2052,20 +2034,23 @@ iframe {
 
         left:
             10px;
+
+        top:
+            1260px;
     }
 
 
     .decor-sticker {
 
         opacity:
-            0.35;
+            0.30;
     }
 
 
     .decor-mark {
 
         opacity:
-            0.25;
+            0.22;
     }
 
 }
@@ -2192,7 +2177,7 @@ iframe {
     .decor-item {
 
         opacity:
-            0.22;
+            0.20;
     }
 
 
@@ -2203,6 +2188,9 @@ iframe {
 
         left:
             -35px;
+
+        top:
+            230px;
     }
 
 
@@ -2213,6 +2201,9 @@ iframe {
 
         right:
             -32px;
+
+        top:
+            700px;
     }
 
 
@@ -2223,6 +2214,9 @@ iframe {
 
         left:
             -25px;
+
+        top:
+            1060px;
     }
 
 
@@ -2233,6 +2227,9 @@ iframe {
 
         right:
             -28px;
+
+        top:
+            390px;
     }
 
 
@@ -2243,6 +2240,9 @@ iframe {
 
         left:
             -25px;
+
+        top:
+            1220px;
     }
 
 
@@ -2306,7 +2306,7 @@ iframe {
     .decor-item {
 
         opacity:
-            0.15;
+            0.14;
     }
 
 
@@ -2317,6 +2317,9 @@ iframe {
 
         left:
             -30px;
+
+        top:
+            220px;
     }
 
 
@@ -2327,6 +2330,9 @@ iframe {
 
         right:
             -30px;
+
+        top:
+            650px;
     }
 
 
@@ -2334,6 +2340,12 @@ iframe {
 
         width:
             65px;
+
+        left:
+            -28px;
+
+        top:
+            980px;
     }
 
 
@@ -2341,6 +2353,12 @@ iframe {
 
         width:
             72px;
+
+        right:
+            -28px;
+
+        top:
+            370px;
     }
 
 
@@ -2348,6 +2366,12 @@ iframe {
 
         width:
             68px;
+
+        left:
+            -27px;
+
+        top:
+            1120px;
     }
 
 }
