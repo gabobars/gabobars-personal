@@ -42,7 +42,6 @@ const backgroundLayer =
     document.querySelector(".background-layer");
 
 
-
 /* =========================================================
    TRANSLATIONS
 ========================================================= */
@@ -99,7 +98,6 @@ const translations = {
 };
 
 
-
 /* =========================================================
    RANDOM TEXT
 ========================================================= */
@@ -113,7 +111,6 @@ function pickRandom(items) {
     ];
 
 }
-
 
 
 /* =========================================================
@@ -142,34 +139,60 @@ function setLanguage(lang) {
         translations[safeLang];
 
 
+    /*
+        Random line below the avatar.
+    */
+
     heroRotatingText.textContent =
         pickRandom(
             copy.heroLines
         );
 
 
+    /*
+        About Me text.
+    */
+
     aboutCopy.textContent =
         copy.aboutCopy;
 
+
+    /*
+        Footer.
+    */
 
     footerMessage.textContent =
         copy.footer;
 
 
-    document
-        .querySelector(
+    /*
+        Section titles.
+    */
+
+    const aboutTitle =
+        document.querySelector(
             "[data-i18n='aboutTitle']"
-        )
-        .textContent =
-        copy.aboutTitle;
+        );
+
+    if (aboutTitle) {
+
+        aboutTitle.textContent =
+            copy.aboutTitle;
+
+    }
 
 
-    document
-        .querySelector(
+    const interestsTitle =
+        document.querySelector(
             "[data-i18n='interestsTitle']"
-        )
-        .textContent =
-        copy.interestsTitle;
+        );
+
+    if (interestsTitle) {
+
+        interestsTitle.textContent =
+            copy.interestsTitle;
+
+    }
 
 
     document.documentElement.lang =
@@ -180,8 +203,9 @@ function setLanguage(lang) {
 }
 
 
-
-/* Toggle */
+/* =========================================================
+   LANGUAGE TOGGLE
+========================================================= */
 
 languageToggle.addEventListener(
     "click",
@@ -201,7 +225,6 @@ languageToggle.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -229,7 +252,6 @@ window.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -262,7 +284,6 @@ volumeRange.value =
     String(
         audio.volume
     );
-
 
 
 /* =========================================================
@@ -302,7 +323,6 @@ function formatTime(seconds) {
 }
 
 
-
 /* =========================================================
    PLAY BUTTON
 ========================================================= */
@@ -325,7 +345,6 @@ function updatePlayButton() {
 }
 
 
-
 playButton.addEventListener(
     "click",
     async () => {
@@ -338,7 +357,10 @@ playButton.addEventListener(
 
             } catch {
 
-                /* Browser blocked playback */
+                /*
+                    Browser blocked autoplay/playback.
+                    User can still press Play again.
+                */
 
             }
 
@@ -353,7 +375,6 @@ playButton.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -402,7 +423,6 @@ audio.addEventListener(
 );
 
 
-
 /* =========================================================
    PROGRESS
 ========================================================= */
@@ -444,7 +464,6 @@ function syncProgress() {
 }
 
 
-
 progressRange.addEventListener(
     "input",
     () => {
@@ -474,7 +493,6 @@ progressRange.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -544,7 +562,6 @@ document.addEventListener(
 );
 
 
-
 /* =========================================================
    AUTOPLAY
 ========================================================= */
@@ -558,21 +575,14 @@ async function tryAutoplay() {
     } catch {
 
         /*
-         * Modern browsers can block
-         * autoplay with sound.
-         *
-         * The user can press Play.
-         */
+            Modern browsers can block
+            autoplay with sound.
+        */
 
     }
 
 }
 
-
-/*
- * Try automatically on page load.
- * Browser may reject this.
- */
 
 window.addEventListener(
     "load",
@@ -583,11 +593,6 @@ window.addEventListener(
     }
 );
 
-
-/*
- * If autoplay was blocked,
- * try again after the first real interaction.
- */
 
 window.addEventListener(
     "pointerdown",
@@ -609,28 +614,24 @@ window.addEventListener(
 );
 
 
-
 /* =========================================================
    YOUR CUSTOM LINKS
 ========================================================= */
 
 /*
- * CIGA
- */
+    CIGA
+*/
 
-document
-    .getElementById("cigaLink")
-    .addEventListener(
+const cigaLink =
+    document.getElementById("cigaLink");
+
+if (cigaLink) {
+
+    cigaLink.addEventListener(
         "click",
         (event) => {
 
             event.preventDefault();
-
-
-            /*
-             * CHANGE THIS
-             * to your CIGA site URL.
-             */
 
             window.location.href =
                 "https://ciga-website.ciga-hq.workers.dev/";
@@ -638,25 +639,23 @@ document
         }
     );
 
+}
 
 
 /*
- * Streaming
- */
+    Streaming
+*/
 
-document
-    .getElementById("streamingLink")
-    .addEventListener(
+const streamingLink =
+    document.getElementById("streamingLink");
+
+if (streamingLink) {
+
+    streamingLink.addEventListener(
         "click",
         (event) => {
 
             event.preventDefault();
-
-
-            /*
-             * CHANGE THIS
-             * to your streaming page.
-             */
 
             window.location.href =
                 "https://twitch.tv/gabobars";
@@ -664,25 +663,23 @@ document
         }
     );
 
+}
 
 
 /*
- * Video editing
- */
+    Video editing
+*/
 
-document
-    .getElementById("editingLink")
-    .addEventListener(
+const editingLink =
+    document.getElementById("editingLink");
+
+if (editingLink) {
+
+    editingLink.addEventListener(
         "click",
         (event) => {
 
             event.preventDefault();
-
-
-            /*
-             * CHANGE THIS
-             * to your editing portfolio/page.
-             */
 
             window.location.href =
                 "https://www.youtube.com/@gabobars";
@@ -690,6 +687,7 @@ document
         }
     );
 
+}
 
 
 /* =========================================================
