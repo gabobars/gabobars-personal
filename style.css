@@ -1,1 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+:root {
+    --bg: #090909;
+    --bg-soft: #101010;
+
+    --text: #eeeeee;
+    --text-soft: #a5a5a5;
+    --text-muted: #666666;
+
+    --accent: #741616;
+    --accent-light: #a52b2b;
+
+    --line: #242424;
+
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", Arial, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(116, 22, 22, 0.10),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--sans);
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+main {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 0 60px;
+}
+
+
+.hero h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(4rem, 12vw, 8rem);
+
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+
+    line-height: 0.9;
+
+    color: var(--text);
+
+    text-shadow:
+        0 0 30px rgba(116, 22, 22, 0.12);
+}
+
+
+.tagline {
+    margin-top: 24px;
+
+    color: var(--text-soft);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: lowercase;
+}
+
+
+.hero-divider {
+    width: 90px;
+
+    height: 1px;
+
+    margin-top: 45px;
+
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.links {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+
+.links a {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 70px;
+
+    color: var(--text-soft);
+
+    text-decoration: none;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.15em;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.links a:not(:nth-child(3n)) {
+    border-right: 1px solid var(--line);
+}
+
+
+.links a:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--line);
+}
+
+
+.links a:hover {
+    color: var(--text);
+
+    background: rgba(116, 22, 22, 0.08);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section {
+    padding: 110px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.section-title {
+    margin-bottom: 40px;
+
+    color: var(--accent-light);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   CURRENTLY
+   ========================================================= */
+
+.currently {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.currently p {
+    padding: 22px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, 0.015);
+
+    color: var(--text-soft);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-text {
+    color: var(--text-soft);
+
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+
+    font-family: var(--serif);
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+.about-text + .about-text {
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   LIKES
+   ========================================================= */
+
+.likes {
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.12em;
+
+    line-height: 2.4;
+}
+
+
+.likes + .likes {
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+.music-player {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 30px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(255, 255, 255, 0.015);
+}
+
+
+.music-info {
+    min-width: 0;
+}
+
+
+.music-artist {
+    color: var(--accent-light);
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+.music-title {
+    margin-top: 4px;
+
+    color: var(--text);
+
+    font-family: var(--serif);
+
+    font-size: 1.4rem;
+
+    font-weight: 500;
+}
+
+
+audio {
+    width: 320px;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    main {
+        width: min(100% - 28px, 900px);
+    }
+
+
+    .hero {
+        min-height: 60vh;
+
+        padding: 60px 0 40px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(3.2rem, 18vw, 6rem);
+    }
+
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .links a:not(:nth-child(3n)) {
+        border-right: none;
+    }
+
+
+    .links a:nth-child(2n) {
+        border-left: 1px solid var(--line);
+    }
+
+
+    .links a:nth-child(-n + 4) {
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .links a:nth-child(5),
+    .links a:nth-child(6) {
+        border-bottom: none;
+    }
+
+
+    .currently {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    .music-player {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+
+    audio {
+        width: 100%;
+    }
+}
