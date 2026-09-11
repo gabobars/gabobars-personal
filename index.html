@@ -1,106 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#080607">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080606"
+    >
 
     <title>GABOBARS</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IM+Fell+English+SC&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- BACKGROUND -->
-    <div class="background-layer" aria-hidden="true">
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div
+        class="background-layer"
+        aria-hidden="true"
+    >
+
         <img
             id="backgroundImage"
             src="assets/images/background.jpg"
             alt=""
         >
+
     </div>
 
-<!-- DECORATIVE MEDIA -->
-<div class="site-decor" aria-hidden="true">
 
-    <a
-        class="decor-gif decor-ghost"
-        href="https://tenor.com/view/tenor-ghost-band-gif-21517797"
-        target="_blank"
-        rel="noopener noreferrer"
+
+    <!-- =====================================================
+         SCROLLING DECORATIVE LAYER
+
+         IMPORTANT:
+         This is absolute, NOT fixed.
+         Therefore all GIFs/stickers move with the page.
+    ====================================================== -->
+
+    <div
+        class="site-decor"
+        aria-hidden="true"
     >
-        <img
-            src="https://media1.tenor.com/m/JFp_Xw27UacAAAAd/tenor-ghost-band.gif"
-            alt=""
+
+
+        <!-- =========================
+             GHOST
+        ========================== -->
+
+        <a
+            class="decor-item decor-ghost decor-clickable"
+            href="https://tenor.com/view/tenor-ghost-band-gif-21517797"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ghost GIF"
         >
-    </a>
 
-    <a
-        class="decor-gif decor-outlast"
-        href="https://tenor.com/view/outlast-game-horror-gif-9281273"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <img
-            src="https://media1.tenor.com/m/3ni-e-SSFYsAAAAd/outlast-game.gif"
-            alt=""
+            <div
+                class="tenor-gif-embed"
+                data-postid="21517797"
+                data-share-method="host"
+                data-aspect-ratio="1.77822"
+                data-width="100%"
+            ></div>
+
+        </a>
+
+
+
+        <!-- =========================
+             OUTLAST #1
+        ========================== -->
+
+        <a
+            class="decor-item decor-outlast-one decor-clickable"
+            href="https://tenor.com/view/outlast-game-horror-gif-9281273"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Outlast GIF"
         >
-    </a>
 
-    <div class="decor-mark decor-mark-one">///</div>
+            <div
+                class="tenor-gif-embed"
+                data-postid="9281273"
+                data-share-method="host"
+                data-aspect-ratio="1.79137"
+                data-width="100%"
+            ></div>
 
-    <div class="decor-mark decor-mark-two">01</div>
+        </a>
 
-    <div class="decor-mark decor-mark-three">+</div>
-    <div class="decor-sticker decor-sticker-a">
-    ONLINE
-</div>
 
-<div class="decor-sticker decor-sticker-b">
-    94
-</div>
 
-<div class="decor-sticker decor-sticker-c">
-    LIVE
-</div>
-</div>
-    
-    <!-- MAIN SITE -->
+        <!-- =========================
+             OUTLAST #2
+        ========================== -->
+
+        <a
+            class="decor-item decor-outlast-two decor-clickable"
+            href="https://tenor.com/view/outlast-game-horror-survival-spooky-gif-27080514"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Outlast GIF"
+        >
+
+            <div
+                class="tenor-gif-embed"
+                data-postid="27080514"
+                data-share-method="host"
+                data-aspect-ratio="1"
+                data-width="100%"
+            ></div>
+
+        </a>
+
+
+
+        <!-- =========================
+             KURUMI #1
+        ========================== -->
+
+        <a
+            class="decor-item decor-kurumi-one decor-clickable"
+            href="https://tenor.com/view/kurumi-tokisaki-date-a-live-gif-21175060"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kurumi GIF"
+        >
+
+            <div
+                class="tenor-gif-embed"
+                data-postid="21175060"
+                data-share-method="host"
+                data-aspect-ratio="1.77822"
+                data-width="100%"
+            ></div>
+
+        </a>
+
+
+
+        <!-- =========================
+             KURUMI #2
+        ========================== -->
+
+        <a
+            class="decor-item decor-kurumi-two decor-clickable"
+            href="https://tenor.com/view/date-a-live-kurumi-anime-clock-eyes-gif-17435845"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Kurumi GIF"
+        >
+
+            <div
+                class="tenor-gif-embed"
+                data-postid="17435845"
+                data-share-method="host"
+                data-aspect-ratio="1.77822"
+                data-width="100%"
+            ></div>
+
+        </a>
+
+
+
+        <!-- =========================
+             SMALL STICKERS
+        ========================== -->
+
+        <div class="decor-sticker sticker-online">
+            ONLINE
+        </div>
+
+
+        <div class="decor-sticker sticker-94">
+            LEVEL 94
+        </div>
+
+
+        <div class="decor-sticker sticker-live">
+            LIVE
+        </div>
+
+
+        <div class="decor-sticker sticker-red">
+            //
+        </div>
+
+
+        <div class="decor-sticker sticker-eye">
+            ◉
+        </div>
+
+
+        <!-- =========================
+             SMALL MARKS
+        ========================== -->
+
+        <div class="decor-mark mark-one">
+            ///
+        </div>
+
+
+        <div class="decor-mark mark-two">
+            01
+        </div>
+
+
+        <div class="decor-mark mark-three">
+            +
+        </div>
+
+
+        <div class="decor-mark mark-four">
+            94
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN SITE
+    ====================================================== -->
+
     <main class="site-shell">
+
 
         <section class="site-panel">
 
-            <!-- Subtle scroll shadows -->
-            <div class="panel-shadow panel-shadow-top"></div>
-            <div class="panel-shadow panel-shadow-bottom"></div>
+
+            <!-- subtle panel edge shadows -->
+
+            <div
+                class="panel-shadow panel-shadow-top"
+            ></div>
+
+            <div
+                class="panel-shadow panel-shadow-bottom"
+            ></div>
 
 
-            <!-- =========================
+
+            <!-- =================================================
                  HERO
-            ========================== -->
+            ================================================== -->
+
             <header class="hero">
 
-                <!-- GABOBARS -->
+
+                <!-- BRAND -->
+
                 <div class="brand">
 
-                    <h1>GABOBARS</h1>
+                    <h1>
+                        GABOBARS
+                    </h1>
 
-                    <span class="brand-line"></span>
+                    <span
+                        class="brand-line"
+                    ></span>
 
                 </div>
 
 
-                <!-- LANGUAGE SWITCH -->
+
+                <!-- LANGUAGE -->
+
                 <div class="language-toggle-wrap">
 
                     <button
@@ -110,17 +316,22 @@
                         aria-label="Switch language"
                     >
 
-                        <span class="toggle-option" data-lang="pt">
+                        <span
+                            class="toggle-option"
+                            data-lang="pt"
+                        >
                             PT
                         </span>
 
-                        <span class="toggle-option" data-lang="en">
+                        <span
+                            class="toggle-option"
+                            data-lang="en"
+                        >
                             ENG
                         </span>
 
                         <span
                             class="toggle-indicator"
-                            id="toggleIndicator"
                         ></span>
 
                     </button>
@@ -128,7 +339,9 @@
                 </div>
 
 
+
                 <!-- AVATAR -->
+
                 <div class="hero-center">
 
                     <img
@@ -136,6 +349,7 @@
                         src="assets/images/avatar.png"
                         alt="GABOBARS avatar"
                     >
+
 
                     <p
                         class="hero-rotating"
@@ -148,14 +362,18 @@
 
 
 
-            <!-- =========================
+            <!-- =================================================
                  CONTENT
-            ========================== -->
+            ================================================== -->
+
             <div class="content">
 
 
                 <!-- ABOUT ME -->
-                <section class="content-section about-section">
+
+                <section
+                    class="content-section about-section"
+                >
 
                     <h2
                         class="section-title"
@@ -164,10 +382,11 @@
                         About Me
                     </h2>
 
+
                     <span
                         class="section-line"
-                        aria-hidden="true"
                     ></span>
+
 
                     <p
                         class="about-copy"
@@ -178,66 +397,90 @@
 
 
 
-                <!-- SOCIAL LINKS -->
-                <section class="content-section social-section">
+                <!-- SOCIALS -->
+
+                <section
+                    class="content-section social-section"
+                >
 
                     <nav
                         class="social-links"
                         aria-label="Social links"
                     >
 
+
                         <a
-                            href="https://twitch.tv/gabobars"
+                            href="YOUR_TWITCH_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             TWITCH
                         </a>
 
-                        <span class="social-divider"></span>
+
+                        <span
+                            class="social-divider"
+                        ></span>
+
 
                         <a
-                            href="https://www.youtube.com/@gabobars"
+                            href="YOUR_YOUTUBE_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             YOUTUBE
                         </a>
 
-                        <span class="social-divider"></span>
+
+                        <span
+                            class="social-divider"
+                        ></span>
+
 
                         <a
-                            href="https://discord.com/invite/GrqEaJrfXu"
+                            href="YOUR_DISCORD_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             DISCORD
                         </a>
 
-                        <span class="social-divider"></span>
+
+                        <span
+                            class="social-divider"
+                        ></span>
+
 
                         <a
-                            href="https://github.com/gabobars"
+                            href="YOUR_GITHUB_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             GITHUB
                         </a>
 
-                        <span class="social-divider"></span>
+
+                        <span
+                            class="social-divider"
+                        ></span>
+
 
                         <a
-                            href="https://steamcommunity.com/profiles/76561199063487402/"
+                            href="YOUR_STEAM_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             STEAM
                         </a>
 
-                        <span class="social-divider"></span>
+
+                        <span
+                            class="social-divider"
+                        ></span>
+
 
                         <a
-                            href="https://gabobars.itch.io/ciga-interacion-studio"
+                            href="YOUR_ITCH_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -250,8 +493,13 @@
 
 
 
-                <!-- CURRENT INTERESTS -->
-                <section class="content-section interests-section">
+                <!-- =================================================
+                     CURRENT INTERESTS
+                ================================================== -->
+
+                <section
+                    class="content-section interests-section"
+                >
 
                     <h2
                         class="section-title"
@@ -260,15 +508,14 @@
                         Current Interests
                     </h2>
 
+
                     <span
                         class="section-line"
-                        aria-hidden="true"
                     ></span>
 
 
                     <div class="interest-grid">
 
-                        <!-- Games / media -->
 
                         <a
                             class="interest-button"
@@ -279,14 +526,16 @@
                             GHOST
                         </a>
 
+
                         <a
                             class="interest-button"
-                            href="https://redbarrelsgames.com/games/outlast/"
+                            href="CURRENT_OUTLAST_LINK"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             OUTLAST
                         </a>
+
 
                         <a
                             class="interest-button"
@@ -297,6 +546,7 @@
                             RESIDENT EVIL
                         </a>
 
+
                         <a
                             class="interest-button"
                             href="https://joeydrewstudios.com/"
@@ -306,6 +556,7 @@
                             BENDY
                         </a>
 
+
                         <a
                             class="interest-button"
                             href="https://unknownworlds.com/subnautica/"
@@ -314,6 +565,7 @@
                         >
                             SUBNAUTICA
                         </a>
+
 
                         <a
                             class="interest-button"
@@ -325,12 +577,10 @@
                         </a>
 
 
-                        <!-- Visual group separation -->
+                        <span
+                            class="interest-group-gap"
+                        ></span>
 
-                        <span class="interest-group-gap"></span>
-
-
-                        <!-- Creation / other -->
 
                         <a
                             class="interest-button"
@@ -341,6 +591,7 @@
                             FNAF
                         </a>
 
+
                         <a
                             class="interest-button"
                             href="https://www.blender.org/"
@@ -350,29 +601,36 @@
                             BLENDER
                         </a>
 
+
                         <a
                             class="interest-button"
-                            href="#"
-                            id="cigaLink"
+                            href="YOUR_CIGA_LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             CIGA
                         </a>
 
+
                         <a
                             class="interest-button"
-                            href="#"
-                            id="streamingLink"
+                            href="YOUR_STREAMING_LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             STREAMING
                         </a>
 
+
                         <a
                             class="interest-button"
-                            href="#"
-                            id="editingLink"
+                            href="YOUR_VIDEO_EDITING_LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             EDITAR VÍDEOS
                         </a>
+
 
                         <a
                             class="interest-button"
@@ -389,14 +647,25 @@
 
 
 
-                <!-- FOOTER -->
+                <!-- =================================================
+                     FOOTER
+                ================================================== -->
+
                 <footer class="site-footer">
 
-                    <div class="footer-line"></div>
+                    <div
+                        class="footer-line"
+                    ></div>
 
-                    <div class="footer-row">
 
-                        <p id="footerMessage"></p>
+                    <div
+                        class="footer-row"
+                    >
+
+                        <p
+                            id="footerMessage"
+                        ></p>
+
 
                         <p>
                             GABOBARS — 2026
@@ -414,9 +683,10 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          MUSIC PLAYER
-    ========================== -->
+    ====================================================== -->
+
     <aside
         class="music-player"
         id="musicPlayer"
@@ -424,12 +694,14 @@
 
         <div class="player-main">
 
+
             <div class="player-label">
                 original track
             </div>
 
 
             <div class="player-controls-row">
+
 
                 <button
                     class="play-button"
@@ -475,6 +747,7 @@
         </div>
 
 
+
         <div
             class="volume-popover"
             id="volumePopover"
@@ -497,14 +770,32 @@
 
 
     <!-- AUDIO -->
+
     <audio
         id="audio"
         preload="metadata"
-        src="assets/music/original-track.mp3"
+        src="assets/audio/original-track.mp3"
     ></audio>
 
 
-    <script src="script.js"></script>
+
+    <!-- =====================================================
+         TENOR EMBED SCRIPT
+    ====================================================== -->
+
+    <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+    ></script>
+
+
+    <!-- YOUR JS -->
+
+    <script
+        src="script.js"
+    ></script>
 
 </body>
+
 </html>
