@@ -68,7 +68,9 @@ const translations = {
 
         footer:
             "thanks for stopping by."
-
+           
+         videoEditing:
+             "VIDEO EDITING",
     },
 
 
@@ -92,7 +94,8 @@ const translations = {
 
         footer:
             "obrigado por passares por aqui."
-
+        videoEditing:
+                "EDITAR VÍDEOS",
     }
 
 };
