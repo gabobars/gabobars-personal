@@ -37,8 +37,6 @@
     >
 
 
-    <!-- Main CSS -->
-
     <link
         rel="stylesheet"
         href="style.css"
@@ -70,11 +68,10 @@
 
 
     <!-- =====================================================
-         SCROLLING DECORATIVE LAYER
-
-         IMPORTANT:
-         This is absolute, NOT fixed.
-         Therefore all GIFs/stickers move with the page.
+         DECORATIVE LAYER
+         
+         This layer scrolls WITH the page.
+         It does not create extra page height.
     ====================================================== -->
 
     <div
@@ -87,12 +84,8 @@
              GHOST
         ========================== -->
 
-        <a
-            class="decor-item decor-ghost decor-clickable"
-            href="https://tenor.com/view/tenor-ghost-band-gif-21517797"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Ghost GIF"
+        <div
+            class="decor-item decor-ghost"
         >
 
             <div
@@ -103,7 +96,7 @@
                 data-width="100%"
             ></div>
 
-        </a>
+        </div>
 
 
 
@@ -111,12 +104,8 @@
              OUTLAST #1
         ========================== -->
 
-        <a
-            class="decor-item decor-outlast-one decor-clickable"
-            href="https://tenor.com/view/outlast-game-horror-gif-9281273"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Outlast GIF"
+        <div
+            class="decor-item decor-outlast-one"
         >
 
             <div
@@ -127,7 +116,7 @@
                 data-width="100%"
             ></div>
 
-        </a>
+        </div>
 
 
 
@@ -135,12 +124,8 @@
              OUTLAST #2
         ========================== -->
 
-        <a
-            class="decor-item decor-outlast-two decor-clickable"
-            href="https://tenor.com/view/outlast-game-horror-survival-spooky-gif-27080514"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Outlast GIF"
+        <div
+            class="decor-item decor-outlast-two"
         >
 
             <div
@@ -151,7 +136,7 @@
                 data-width="100%"
             ></div>
 
-        </a>
+        </div>
 
 
 
@@ -159,12 +144,8 @@
              KURUMI #1
         ========================== -->
 
-        <a
-            class="decor-item decor-kurumi-one decor-clickable"
-            href="https://tenor.com/view/kurumi-tokisaki-date-a-live-gif-21175060"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Kurumi GIF"
+        <div
+            class="decor-item decor-kurumi-one"
         >
 
             <div
@@ -175,7 +156,7 @@
                 data-width="100%"
             ></div>
 
-        </a>
+        </div>
 
 
 
@@ -183,12 +164,8 @@
              KURUMI #2
         ========================== -->
 
-        <a
-            class="decor-item decor-kurumi-two decor-clickable"
-            href="https://tenor.com/view/date-a-live-kurumi-anime-clock-eyes-gif-17435845"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Kurumi GIF"
+        <div
+            class="decor-item decor-kurumi-two"
         >
 
             <div
@@ -199,7 +176,7 @@
                 data-width="100%"
             ></div>
 
-        </a>
+        </div>
 
 
 
@@ -232,6 +209,7 @@
         </div>
 
 
+
         <!-- =========================
              SMALL MARKS
         ========================== -->
@@ -255,7 +233,6 @@
             94
         </div>
 
-
     </div>
 
 
@@ -270,7 +247,7 @@
         <section class="site-panel">
 
 
-            <!-- subtle panel edge shadows -->
+            <!-- Panel shadows -->
 
             <div
                 class="panel-shadow panel-shadow-top"
@@ -408,7 +385,6 @@
                         aria-label="Social links"
                     >
 
-
                         <a
                             href="YOUR_TWITCH_LINK"
                             target="_blank"
@@ -417,11 +393,9 @@
                             TWITCH
                         </a>
 
-
                         <span
                             class="social-divider"
                         ></span>
-
 
                         <a
                             href="YOUR_YOUTUBE_LINK"
@@ -431,11 +405,9 @@
                             YOUTUBE
                         </a>
 
-
                         <span
                             class="social-divider"
                         ></span>
-
 
                         <a
                             href="YOUR_DISCORD_LINK"
@@ -445,11 +417,9 @@
                             DISCORD
                         </a>
 
-
                         <span
                             class="social-divider"
                         ></span>
-
 
                         <a
                             href="YOUR_GITHUB_LINK"
@@ -459,11 +429,9 @@
                             GITHUB
                         </a>
 
-
                         <span
                             class="social-divider"
                         ></span>
-
 
                         <a
                             href="YOUR_STEAM_LINK"
@@ -473,11 +441,9 @@
                             STEAM
                         </a>
 
-
                         <span
                             class="social-divider"
                         ></span>
-
 
                         <a
                             href="YOUR_ITCH_LINK"
@@ -493,9 +459,7 @@
 
 
 
-                <!-- =================================================
-                     CURRENT INTERESTS
-                ================================================== -->
+                <!-- CURRENT INTERESTS -->
 
                 <section
                     class="content-section interests-section"
@@ -647,9 +611,7 @@
 
 
 
-                <!-- =================================================
-                     FOOTER
-                ================================================== -->
+                <!-- FOOTER -->
 
                 <footer class="site-footer">
 
@@ -694,14 +656,12 @@
 
         <div class="player-main">
 
-
             <div class="player-label">
                 original track
             </div>
 
 
             <div class="player-controls-row">
-
 
                 <button
                     class="play-button"
@@ -747,7 +707,6 @@
         </div>
 
 
-
         <div
             class="volume-popover"
             id="volumePopover"
@@ -769,7 +728,9 @@
 
 
 
-    <!-- AUDIO -->
+    <!-- =====================================================
+         AUDIO
+    ====================================================== -->
 
     <audio
         id="audio"
@@ -779,9 +740,7 @@
 
 
 
-    <!-- =====================================================
-         TENOR EMBED SCRIPT
-    ====================================================== -->
+    <!-- TENOR -->
 
     <script
         type="text/javascript"
